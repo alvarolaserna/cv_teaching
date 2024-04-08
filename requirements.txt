@@ -1,0 +1,3 @@
+git+https://github.com/testdevlab/Py-TestUI@master
+cv_pom
+pytest
