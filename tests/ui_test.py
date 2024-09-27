@@ -29,7 +29,7 @@ class TestSuite:
         testui_driver.navigate_to("https://testdevlab.com")
         testui_driver.get_driver.set_window_size(1200, 700)
         # Prompt: click on Accept
-        e(testui_driver, "css", ".CookieManagement_actions__XrYwF button").click()
+        e(testui_driver, "xpath", '//*[@id="__next"]/div/div[1]/div/div[2]/button').click()
         # Prompt: click in contact us
         e(testui_driver, "css", '.Menu_actions__rHKeh a[href="/contact-us"]').click()
         # Prompt: enter random credentials in Full name, Business E-mail and Message
