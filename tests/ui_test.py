@@ -27,7 +27,7 @@ def cv_pom_driver(testui_driver):
 class TestSuite:
     def test_test_for_testdevlab(self, testui_driver: TestUIDriver, cv_pom_driver: CVPOMDriver):
         testui_driver.navigate_to("https://testdevlab.com")
-        testui_driver.get_driver.set_window_size(1200, 700)
+        testui_driver.get_driver().set_window_size(1200, 700)
         # Prompt: click on Accept
         e(testui_driver, "css", ".CookieManagement_actions__XrYwF button").click()
         # Prompt: click in contact us
@@ -43,7 +43,7 @@ class TestSuite:
 
     def test_test_for_flutter_cv(self, testui_driver: TestUIDriver, cv_pom_driver: CVPOMDriver):
         testui_driver.navigate_to("https://flutter-gallery-archive.web.app/")
-        testui_driver.get_driver.set_window_size(1200, 700)
+        testui_driver.get_driver().set_window_size(1200, 700)
         # Prompt: click in Okay
         e(testui_driver, "id", "cookie-consent").click()
         cv_pom_driver.element({"label": "shrine-main"}).wait_visible()
@@ -57,7 +57,7 @@ class TestSuite:
 
     def test_test_for_testdevlab_cv(self, testui_driver: TestUIDriver, cv_pom_driver: CVPOMDriver):
         testui_driver.navigate_to("https://testdevlab.com")
-        testui_driver.get_driver.set_window_size(1200, 700)
+        testui_driver.get_driver().set_window_size(1200, 700)
         # Prompt: click in contact us
         cv_pom_driver.element({"text": {"value": "Contact us", "case_sensitive": False}}).click()
         # Prompt: click on Accept
