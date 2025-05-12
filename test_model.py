@@ -34,7 +34,7 @@ args2 = {"ocr": {"paragraph": True}}
 model_path = args.model
 if args.model is None or args.model == "":
     BASE_DIR = Path(__file__).resolve().parent
-    model_path = BASE_DIR / "resources" / "best_g.pt" 
+    model_path = BASE_DIR / "tests" / "resources" / "best_g.pt" 
 cv_pom_driver = TestUICVPOMDriver(model_path=model_path, driver=driver, **args2)
 
 
