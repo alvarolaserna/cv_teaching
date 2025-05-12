@@ -8,7 +8,10 @@ class GooglePage:
         self.page =  cv_driver.get_page()
 
     def click_cookies(self):
-        self.cookies.swipe_to('down', limit=4).click()
+        try:
+            self.cookies.swipe_to('down', limit=4).click()
+        except:
+            pass
 
         return self
 
